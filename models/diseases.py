@@ -1,4 +1,4 @@
-from app import db
+from dbinfo import db
 
 class tbdiseases(db.Model):
     

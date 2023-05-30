@@ -1,6 +1,6 @@
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, auto_field
 from models.diseases import tbdiseases  
-from app import db
+from dbinfo import db
 
 
 class diseaseschema(SQLAlchemyAutoSchema):
