@@ -7,8 +7,8 @@ from flask_sqlalchemy import SQLAlchemy
 url = quote('localhost')
 port = quote('3306')
 username = quote('root')
-password =  quote('$Cambodia__089$')
-mysqldb = quote('dbsaladdiseases')
+password =  quote('')
+mysqldb = quote('dbsalad')
 
 # config file
 app = Flask(__name__)
