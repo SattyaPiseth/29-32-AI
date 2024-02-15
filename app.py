@@ -1,14 +1,17 @@
-from dbinfo import app, api, db, render_template
+from controls.home import HomePage
+from controls.salad import Disease, Diseases
+from dbinfo import app, api, db
 
-from controls.salad import HomePage,Disease,DiseaseList
+
 ######### webpage #########
 @app.errorhandler(404)
 def page_not_found(err):
-    return {"msg": "page not found"}
+    return {"msg": "Page not found"}
+
 
 api.add_resource(HomePage, "/")
-api.add_resource(Disease, "/disease/<did>")
-api.add_resource(DiseaseList, "/diseaselist")
+api.add_resource(Disease, "/disease", "/disease/<did>")
+api.add_resource(Diseases, "/diseases")
 
 if __name__ == "__main__":
     db.init_app(app)
